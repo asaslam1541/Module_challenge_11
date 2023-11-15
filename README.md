@@ -10,6 +10,7 @@ Additionally, the search data was grouped by the week of the year to determine i
 
 ## Step 3: Analyzing Stock Price Data
 The stock price data was read in and plotted. Both the search and stock price data were concatenated into a single DataFrame. The data for the first half of 2020 (January to June) was sliced and visualized using hvPlot to identify common trends.
+After applying numerous codes to remove the NaN values the codes did not perform effectively: the dropna() function led to an empty DataFrame. isnull(), fillna() and many other techniques were used to correct this; however, none of these worked.
 
 ## Step 4: Time Series Analysis
 Several new columns were created in the DataFrame, including "Lagged Search Trends," which shifted the search traffic by one hour, "Stock Volatility," which held a four-hour rolling average of stock volatility, and "Hourly Stock Return," which calculated the percentage change in stock price on an hourly basis.
